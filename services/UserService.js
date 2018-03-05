@@ -32,8 +32,7 @@ module.exports = {
     },
     async findAll(params) {
         try {
-            let data = await User.findAll({where: params});
-            return this.formatResult(data);
+            return await User.findAll({where: params, raw: true});
         }
         catch (err) {
             console.log('查找数据失败', err);

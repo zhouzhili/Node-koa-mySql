@@ -4,8 +4,8 @@
  * desc:user模型
  */
 const DataTypes = require('sequelize').DataTypes;
-const sequelize = require('../db/db');
-module.exports = sequelize.define('user', {
+const mySql = require('../db/mySql');
+module.exports = mySql.define('user', {
     Id: {
         type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true, unique: true
     },

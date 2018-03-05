@@ -5,9 +5,8 @@
  */
 const userService = require('./services/UserService');
 
-userService.create({
-    userName: 'new User',
-    passWord: 'ewww'
+userService.findAll({
+    userName: 'www'
 }).then(result => {
     console.log(result)
 }).catch(error => {
